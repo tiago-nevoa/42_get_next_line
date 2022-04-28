@@ -6,11 +6,15 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 12:18:31 by tferreir          #+#    #+#             */
-/*   Updated: 2022/04/21 12:24:56 by tferreir         ###   ########.fr       */
+/*   Updated: 2022/04/28 12:24:08 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*get_next_line(int fd)
 {
-	return (0);
+	char	*c;
+
+	c = 0;
+	c += fd;
+	return (c);
 }

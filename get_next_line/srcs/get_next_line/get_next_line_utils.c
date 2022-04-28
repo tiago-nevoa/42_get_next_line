@@ -6,11 +6,10 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 12:18:28 by tferreir          #+#    #+#             */
-/*   Updated: 2022/04/21 12:24:26 by tferreir         ###   ########.fr       */
+/*   Updated: 2022/04/28 12:02:17 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	get_next_line_utils(void)
 {
-	return (0);
 }

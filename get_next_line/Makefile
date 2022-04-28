@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    MakeFile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/21 11:56:16 by tferreir          #+#    #+#              #
-#    Updated: 2022/04/21 12:11:44 by tferreir         ###   ########.fr        #
+#    Updated: 2022/04/28 12:00:57 by tferreir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,25 +14,25 @@
 NAME	=		get_next_line.a
 
 # ------------  DIRECTORIES  ------------------------------------------------- #
-SRC_DIR	=		srcs
-HDR_DIR	=		includes
-OBJ_DIR	=		objs
-LIBFT_DIR =		libft
-FT_GET_NEXT_LINE =	get_next_line
+SRC_DIR	=			srcs
+HDR_DIR	=			includes
+OBJ_DIR	=			objs
+LIBFT_DIR =			libft
+GET_NEXT_LINE_DIR =	get_next_line
 
 # ------------  SOURCE FILES  ------------------------------------------------ #
 
 SRC_FLS	=		$(LIBFT_FLS)\
 				$(GET_NEXT_LINE_FLS)\
 
-LIBFT_FLS =		$(LIBFT_DIR)/ft_strlen.c \
+LIBFT_FLS =		$(LIBFT_DIR)/ft_strlen.c\
 
-GET_NEXT_LINE_FLS = $(GET_NEXT_LINE_DIR)/get_next_line_utils.c \
-					$(GET_NEXT_LINE_DIR)/get_next_line.c \
+GET_NEXT_LINE_FLS = $(GET_NEXT_LINE_DIR)/get_next_line_utils.c\
+					$(GET_NEXT_LINE_DIR)/get_next_line.c
 
 # ------------  FILEPATHS  --------------------------------------------------- #
 SRCS	=		$(addprefix $(SRC_DIR)/, $(SRC_FLS))
-OBJS	=		$(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o, $(SRCS))
+OBJS	=		$(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS))
 DEPS	=		$(OBJS:.o=.d)
 
 # ------------  FLAGS  ------------------------------------------------------- #
@@ -41,7 +41,7 @@ RM		=		rm -rf
 CFLGS	=		-Wall -Werror -Wextra
 IFLGS	=		-I $(HDR_DIR)
 DFLGS	=		-MMD -MP -O1
-
+# ---- -D BUFFER_SIZE=n (define the buffer size for read()) cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 <files>.c ---> toDo
 # ------------  RULES  ------------------------------------------------------- #
 .PHONY: all clean fclean re
 
